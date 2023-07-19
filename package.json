@@ -2,8 +2,8 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://c65bab91e06d2b.lhr.life/",
   "options": {
+    "proxy": "https://c65bab91e06d2b.lhr.life/",
     "allowedHosts": [
       "146.190.115.148",
       "nonsensefreerecipes.com"

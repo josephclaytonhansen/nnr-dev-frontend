@@ -6,7 +6,9 @@
     "proxy": "http://146.190.115.148:8000/",
     "allowedHosts": [
       "146.190.115.148",
-      "nonsensefreerecipes.com"
+      "nonsensefreerecipes.com",
+      "www.nonsensefreerecipes.com",
+      "http://146.190.115.148:8000/"
     ]
 
   },

@@ -18,7 +18,7 @@ const Ingredients = () => {
                         <Col>
                             <h4>{index  + 1}</h4>
                         </Col>
-                        <Col style={{flexGrow:`10`}}>
+                        <Col style={{flexGrow:`11`}}>
                         <ListGroup variant = 'flush'>
                     <ListGroup.Item key={instructions.name}>
                         {instructions.name && (<><strong>{instructions.name}</strong><br/></>)}

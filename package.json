@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "options": {
-    "proxy": "https://c65bab91e06d2b.lhr.life/",
+    "proxy": "http://146.190.115.148:8000/",
     "allowedHosts": [
       "146.190.115.148",
       "nonsensefreerecipes.com"

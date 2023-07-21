@@ -15,10 +15,10 @@ const Ingredients = () => {
             <h3>Instructions</h3>
                 {recipe.instructions.map((instructions, index) => (
                     <Row className='align-items-center my-3' >
-                        <Col style = {{maxWidth:'1rem'}}>
+                        <Col>
                             <h4>{index  + 1}</h4>
                         </Col>
-                        <Col>
+                        <Col style={{flexGrow:`10`}}>
                         <ListGroup variant = 'flush'>
                     <ListGroup.Item key={instructions.name}>
                         {instructions.name && (<><strong>{instructions.name}</strong><br/></>)}

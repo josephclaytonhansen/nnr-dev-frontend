@@ -36,7 +36,7 @@ const Ingredients = () => {
                     {recipe.ingredients.map((ingredient) => (
                         
                         <ListGroup.Item key={ingredient.name}>
-                            {fractionFormatter(ingredient.amount * (feeds/recipe.feeds))} {!ingredient.unit ==="single" && ingredient.unit}{ingredient.name}
+                            {fractionFormatter(ingredient.amount * (feeds/recipe.feeds))} {ingredient.unit ==="single" ? "" : ingredient.unit}{ingredient.name}
                         </ListGroup.Item>
                     ))}
                 </ListGroup>

@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "options": {
-    "proxy": "https://146.190.115.148:8443/",
+    "proxy": "https://146.190.62.177:8443/",
     "allowedHosts": [
-      "146.190.115.148",
+      "146.190.62.177",
       "nonsensefreerecipes.com",
       "www.nonsensefreerecipes.com",
-      "https://146.190.115.148:8443/"
+      "https://146.190.62.177:8443/"
     ]
 
   },

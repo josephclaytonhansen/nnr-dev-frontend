@@ -150,8 +150,8 @@ const Home = () => {
             {recipes ? (
                 <Container>
                     <h2>Random Recipes</h2>
-                    <Row>
-                        <Col>
+                    <Row className={'my-2'}>
+                        <Col className = 'display-desktop'>
                             <HomeCarousel recipes={recipes} classes="home-carousel"/>
                         </Col>
                         <Col>

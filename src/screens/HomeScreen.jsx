@@ -11,8 +11,8 @@ import {Link} from "react-router-dom"
 const Home = () => {
     const {data:data, isLoading, error} = useGetRecipesQuery()
     let recipes = data?.recipes
-    let temp = recipes
-    let reverseRecipes = temp?.reverse()
+    let temp = recipes.slice()
+    let reverseRecipes = temp.reverse()
     
     if (recipes){
         sessionStorage.setItem("recipes", JSON.stringify(recipes))

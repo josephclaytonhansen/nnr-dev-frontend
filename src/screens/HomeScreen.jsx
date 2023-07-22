@@ -28,7 +28,7 @@ const Home = () => {
     recipes?.forEach((recipe) => {
         recipe.ingredients.forEach((ingredient) => {
             if (!ingredients.includes(ingredient.name)){
-                ingredients.push(ingredient.name)
+                ingredients.push(ingredient.name.toLowerCase())
             }
         })
     })
@@ -165,7 +165,8 @@ const Home = () => {
     }
 
     const ingredientSearchHandler = () => {
-        window.location.href = `/ingredient/${selectedIngredient}`
+        let slug = selectedIngredient.toLowerCase().replace(/ /g, '-')
+        window.location.href = `/ingredient/${slug}`
     }
 
     return(
@@ -292,7 +293,7 @@ const Home = () => {
                                             <Card.Text>
                                                 <Row className = 'd-flex gy-2' style = {{flexWrap:'wrap'}}>
                                                     <Col>
-                                                        <Form>
+                                                        <Form className = 'my-2'>
                                                             <FormGroup>
                                                                 <FormControl as = 'select' id = 'ingredient-dropdown' onChange = {() => ingredientDropDownHandler()}>
                                                                     {ingredients.map((ingredient) => (
@@ -300,7 +301,7 @@ const Home = () => {
                                                                     ))}
                                                                     </FormControl>
                                                             </FormGroup>
-                                                            <Button onClick = {() => ingredientSearchHandler()} className = 'bg-d-blue button-bg-d-blue'><h6 className = 'py-0 my-3'>Search</h6></Button>
+                                                            <Button onClick = {() => ingredientSearchHandler()} className = 'bg-d-blue button-bg-d-blue'><h6 className = 'py-0 my-0'>Search</h6></Button>
                                                         </Form>
 
                                                     </Col>

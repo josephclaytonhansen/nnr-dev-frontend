@@ -144,7 +144,7 @@ const Home = () => {
         <main>
             {recipes ? (
                 <Container>
-                    <HomeCarousel recipes={recipes} classes="home-carousel"/>
+                    <HomeCarousel recipes={recipes} style = {{maxWidth:`800px`}}classes="home-carousel"/>
                     <Row className={'my-5'}>
                         <Col>
                         <h2>Recent Recipes</h2>

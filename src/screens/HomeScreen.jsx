@@ -24,7 +24,7 @@ const Home = () => {
 
 
     let ingredients = []
-    let [selectedIngredient, setSelectedIngredient] = useState('')
+    let [selectedIngredient, setSelectedIngredient] = useState('allspice')
     recipes?.forEach((recipe) => {
         recipe.ingredients.forEach((ingredient) => {
             if (!ingredients.includes(ingredient.name)){

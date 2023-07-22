@@ -23,6 +23,7 @@ import UserPage from './screens/UserPageScreen'
 import UserRegister from './screens/UserRegisterScreen'
 import AdminListAllUsers from './screens/admin/AdminListAllUsers'
 import ListAllRecipes from './screens/ListAllRecipesScreen'
+import IngredientRecipes from './screens/IngredientRecipeListScreen'
 import './css/App.css'
 import 'react-toastify/dist/ReactToastify.css'
 import Header from './components/Header'
@@ -60,6 +61,7 @@ function App() {
           <Route path="/dog-safe" component={withRouter(DogSafe)} />
           <Route path="/meal/:meal" component={withRouter(Meal)} />
           <Route path="/recipes" component={withRouter(ListAllRecipes)} />
+          <Route path="/ingredient/:ingredient" component={withRouter(IngredientRecipes)} />
 
           <Route path="/why" component={withRouter(Why)}/>
           <Route path="/contribute" component={withRouter(Contribute)} />

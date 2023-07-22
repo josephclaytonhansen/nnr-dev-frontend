@@ -144,13 +144,22 @@ const Home = () => {
         <main>
             {recipes ? (
                 <Container>
-                    <HomeCarousel recipes={recipes} style = {{maxWidth:`800px`}}classes="home-carousel"/>
+                    <h2>Random Recipes</h2>
+                    <Row>
+                        <Col>
+                            <HomeCarousel recipes={recipes} classes="home-carousel"/>
+                        </Col>
+                        <Col>
+                            <HomeCarousel recipes={recipes} classes="home-carousel"/>
+                        </Col>
+                    </Row>
+                    
                     <Row className={'my-5'}>
                         <Col>
                         <h2>Recent Recipes</h2>
                         
                         <Row>
-                            {recipes.slice(0, 8).map((recipe) => (
+                            {recipes.reverse().slice(0, 8).map((recipe) => (
                                 <Col key={recipe.id} sm={12} md={6} lg={3} xl={3} className = 'no-dec'>
                                     <Link to={`/recipes/${recipe.slug}`}>
                                     <Card className='my-3 p-3 rounded hover-cream'>

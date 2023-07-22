@@ -67,7 +67,7 @@ const Internal = ({recipe}) => {
             try{
                 const res = await deleteRecipe(recipe._id).unwrap()
                 toast.success("Recipe deleted")
-                history.push('/')
+                window.location.href = window.location.origin
             } catch(err){
                 toast.error(err?.data?.message || err.error)
             }

@@ -8,8 +8,7 @@ import Message from "../components/Message"
 
 const IngredientRecipes = () => {
     const {ingredient} = useParams()
-    const {data:data, isLoading, error} = useGetRecipesByIngredientQuery(ingredient)
-    const recipes = data?.recipes
+    const {data:recipes, isLoading, error} = useGetRecipesByIngredientQuery(ingredient)
     sessionStorage.setItem("recipes", JSON.stringify(recipes))
 
     return(

@@ -1,12 +1,13 @@
 import { useGetRecipesQuery } from "../slices/recipesApiSlice"
 import React from "react"
-import { Container, Card, Row, Col, Button } from "react-bootstrap"
+import { Container, Card, Row, Col, Button, Form, FormControl, FormGroup } from "react-bootstrap"
 import Loader from "../components/Loader"
 import Message from "../components/Message"
 import HomeCarousel from "../components/Carousel"
 import StarRating from "../components/StarRating"
 import GFV from "../components/GFV"
 import {Link} from "react-router-dom"
+import {useState} from "react"
 
 const Home = () => {
     let reverseRecipes = []
@@ -20,6 +21,20 @@ const Home = () => {
     if (recipes){
         sessionStorage.setItem("recipes", JSON.stringify(recipes))
     }
+
+
+    let ingredients = []
+    let [selectedIngredient, setSelectedIngredient] = useState('')
+    recipes?.forEach((recipe) => {
+        recipe.ingredients.forEach((ingredient) => {
+            if (!ingredients.includes(ingredient.name)){
+                ingredients.push(ingredient.name)
+            }
+        })
+    })
+
+
+
     const breakfast = recipes?.filter((recipe) => recipe.meal.toLowerCase() === 'breakfast').length > 0
     const lunch = recipes?.filter((recipe) => recipe.meal.toLowerCase() === 'lunch').length > 0
     const dinner = recipes?.filter((recipe) => recipe.meal.toLowerCase() === 'dinner').length > 0
@@ -143,6 +158,15 @@ const Home = () => {
         window.location.href = '/dog-safe'
     }
 
+    const ingredientDropDownHandler = () => {
+        let ingredient = document.getElementById('ingredient-dropdown').value
+        setSelectedIngredient(ingredient)
+    }
+
+    const ingredientSearchHandler = () => {
+        //fetch
+    }
+
     return(
         <>
         
@@ -258,6 +282,32 @@ const Home = () => {
                                         </Card.Text>
                                     </Card.Body>
                                 </Card>
+                                </Col>
+                                <Col>
+                                    <Card>
+                                        <Card.Body>
+                                            <Card.Title as = 'h4' className = 'my-3'>Ingredient</Card.Title>
+                                            <hr/>
+                                            <Card.Text>
+                                                <Row className = 'd-flex gy-2' style = {{flexWrap:'wrap'}}>
+                                                    <Col>
+                                                        <Form>
+                                                            <FormGroup>
+                                                                <FormControl as = 'select' id = 'ingredient-dropdown' onChange = {() => ingredientDropDownHandler()}>
+                                                                    {ingredients.map((ingredient) => (
+                                                                        <option key = {ingredient} value = {ingredient}>{ingredient}</option>
+                                                                    ))}
+                                                                    </FormControl>
+                                                            </FormGroup>
+                                                            <Button onClick = {() => ingredientSearchHandler()} className = 'bg-d-blue button-bg-d-blue'><h6 className = 'py-0 my-0'>Search</h6></Button>
+                                                        </Form>
+
+                                                    </Col>
+
+                                                </Row>
+                                            </Card.Text>
+                                        </Card.Body>
+                                    </Card>
                                 </Col>
                             </Row>
                         </Col>

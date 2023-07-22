@@ -63,7 +63,7 @@ const Internal = ({recipe}) => {
 
     const deleteHandler = async(e) => {
         e.preventDefault()
-        if(recipe._id){
+
             try{
                 const res = await deleteRecipe(recipe._id).unwrap()
                 toast.success("Recipe deleted")
@@ -71,7 +71,6 @@ const Internal = ({recipe}) => {
             } catch(err){
                 toast.error(err?.data?.message || err.error)
             }
-        }
     }
 
     const [glutenFree, setGlutenFree] = useState(recipe.isGlutenFree)

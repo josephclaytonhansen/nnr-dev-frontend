@@ -7,7 +7,8 @@ import Loader from "../components/Loader"
 import Message from "../components/Message"
 
 const IngredientRecipes = () => {
-    const {ingredient} = useParams()
+    let {ingredient} = useParams()
+    ingredient = ingredient.replace(/-/g, " ")
     const {data:recipes, isLoading, error} = useGetRecipesByIngredientQuery(ingredient)
     sessionStorage.setItem("recipes", JSON.stringify(recipes))
 

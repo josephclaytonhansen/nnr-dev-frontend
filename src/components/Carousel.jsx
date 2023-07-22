@@ -22,7 +22,7 @@ const HomeCarousel = ({recipes, classes}) => {
 
     return (
 
-        <Carousel className = {classes} activeIndex={index} onSelect={handleSelect}>
+        <Carousel className = {classes} activeIndex={index} onSelect={handleSelect} style = {{maxWidth:`600px`}}>
             {randomRecipes.map((recipe) => (
                 <Carousel.Item key={recipe.id} style = {{maxHeight: `40vh`, overflow:`hidden`}}>
                     <img style = {{margin:`auto`}} className="d-block w-100" src={recipe.image} alt={recipe.name} />

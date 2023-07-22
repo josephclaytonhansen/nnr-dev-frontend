@@ -168,7 +168,10 @@ const Home = () => {
                                 <Col key={recipe.id} sm={12} md={6} lg={3} xl={3} className = 'no-dec'>
                                     <Link to={`/recipes/${recipe.slug}`}>
                                     <Card className='my-3 p-3 rounded hover-cream'>
-                                        <Card.Img src={recipe.image} style={{width:`100%`}} variant='top' className = "card-img-fh" />
+                                        {recipe.image ? (<Card.Img src={recipe.image} style={{width:`100%`}} variant='top' className = "card-img-fh" />) : (
+                                            <Card.Img src='https://i.postimg.cc/FHNTQdhL/d.png' style={{width:`100%`}} variant='top' className = "card-img-fh" />
+                                        )}
+                                        
                                         <Card.Body>
                                             <Card.Title className = 'd-flex'>
                                                 <strong>{recipe.name}</strong>

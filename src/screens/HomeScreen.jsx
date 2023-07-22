@@ -178,7 +178,8 @@ const Home = () => {
                                             </Card.Title>
                                             <Row className = 'd-flex justify-content-center align-content-center align-items-center'>
                                                 <Col>
-                                                    <StarRating rating={recipe.rating}/>
+                                                {recipe.numReviews > 0 && (<StarRating rating={recipe.rating}/>)}
+        
                                                 </Col>
                                                 <Col  className = 'flex-grow-0 flex-shrink-0'>
                                                 <GFV recipe = {recipe}/>

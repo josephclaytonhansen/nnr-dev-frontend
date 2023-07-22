@@ -293,8 +293,8 @@ const Home = () => {
                                             <Card.Text>
                                                 <Row className = 'd-flex gy-2' style = {{flexWrap:'wrap'}}>
                                                     <Col>
-                                                        <Form className = 'my-2'>
-                                                            <FormGroup>
+                                                        <Form>
+                                                            <FormGroup className = 'my-2'>
                                                                 <FormControl as = 'select' id = 'ingredient-dropdown' onChange = {() => ingredientDropDownHandler()}>
                                                                     {ingredients.map((ingredient) => (
                                                                         <option key = {ingredient} value = {ingredient}>{ingredient}</option>

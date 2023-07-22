@@ -32,6 +32,7 @@ const Home = () => {
             }
         })
     })
+    ingredients = ingredients.sort()
 
 
 
@@ -164,7 +165,7 @@ const Home = () => {
     }
 
     const ingredientSearchHandler = () => {
-        //fetch
+        window.location.href = `/ingredient/${selectedIngredient}`
     }
 
     return(
@@ -299,7 +300,7 @@ const Home = () => {
                                                                     ))}
                                                                     </FormControl>
                                                             </FormGroup>
-                                                            <Button onClick = {() => ingredientSearchHandler()} className = 'bg-d-blue button-bg-d-blue'><h6 className = 'py-0 my-0'>Search</h6></Button>
+                                                            <Button onClick = {() => ingredientSearchHandler()} className = 'bg-d-blue button-bg-d-blue'><h6 className = 'py-0 my-3'>Search</h6></Button>
                                                         </Form>
 
                                                     </Col>

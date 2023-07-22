@@ -238,3 +238,8 @@ header{
 .hover-cream:hover{
     background-color: var(--light-cream)!important;
 }
+
+.card-img-fh{
+    height: 200px!important;
+    object-fit: cover;
+}

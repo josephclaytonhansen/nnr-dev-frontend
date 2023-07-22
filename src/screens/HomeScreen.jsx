@@ -11,6 +11,7 @@ import {Link} from "react-router-dom"
 const Home = () => {
     const {data:data, isLoading, error} = useGetRecipesQuery()
     const recipes = data?.recipes
+    const reverseRecipes = recipes?.reverse()
     
     if (recipes){
         sessionStorage.setItem("recipes", JSON.stringify(recipes))
@@ -159,7 +160,7 @@ const Home = () => {
                         <h2>Recent Recipes</h2>
                         
                         <Row>
-                            {recipes.reverse().slice(0, 8).map((recipe) => (
+                            {reverseRecipes.slice(0, 8).map((recipe) => (
                                 <Col key={recipe.id} sm={12} md={6} lg={3} xl={3} className = 'no-dec'>
                                     <Link to={`/recipes/${recipe.slug}`}>
                                     <Card className='my-3 p-3 rounded hover-cream'>

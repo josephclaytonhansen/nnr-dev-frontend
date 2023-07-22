@@ -10,6 +10,7 @@ const IngredientRecipes = () => {
     const {ingredient} = useParams()
     const {data:data, isLoading, error} = useGetRecipesByIngredientQuery(ingredient)
     const recipes = data?.recipes
+    sessionStorage.setItem("recipes", JSON.stringify(recipes))
 
     return(
         <main>
@@ -17,9 +18,7 @@ const IngredientRecipes = () => {
             <h1 style = {{marginBottom: "2rem"}}>Recipes with {ingredient}</h1>
                 {recipes ? (
                     <RecipeList recipes={recipes}/>
-                ) : isLoading ? (<Loader/>) : error ? (
-                    <Message variant='dark'>There has been an error, please refresh the page.</Message>
-                ) : (
+                ) : isLoading ? (<Loader/>) : (
                     <Message variant='dark'>There has been an error, please refresh the page.</Message>
                 )}
             </Container>

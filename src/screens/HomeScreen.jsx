@@ -149,11 +149,8 @@ const Home = () => {
         <main>
             {recipes ? (
                 <Container>
-                    <h2>Random Recipes</h2>
+                    <h2 className = 'mb-3'>Featured Recipes</h2>
                     <Row className={'my-2'}>
-                        <Col className = 'display-desktop'>
-                            <HomeCarousel recipes={recipes} classes="home-carousel"/>
-                        </Col>
                         <Col>
                             <HomeCarousel recipes={recipes} classes="home-carousel"/>
                         </Col>
@@ -193,10 +190,10 @@ const Home = () => {
                                 </Col>
                             ))}
                         </Row>
-                        <Button onClick = {() => toAll()} className = 'bg-red button-bg-red'><h6 className = 'my-0 py-0 '>See more</h6></Button>
+                        <Button onClick = {() => toAll()} className = 'bg-red button-bg-red my-2'><h6 className = 'my-0 py-0 '>See more</h6></Button>
                         </Col>
                     </Row>
-                    <Row>
+                    <Row className = 'mb-3'>
                         <Col>
                             <h2>Filter recipes</h2>
                             <Row>

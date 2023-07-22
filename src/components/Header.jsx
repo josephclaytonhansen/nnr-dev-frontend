@@ -2,7 +2,7 @@ import { Nav, NavDropdown, NavLink, Navbar, Container, Form, FormControl, FormGr
 import { LinkContainer } from "react-router-bootstrap"
 import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faUser} from '@fortawesome/free-solid-svg-icons'
+import {faUser, faDice} from '@fortawesome/free-solid-svg-icons'
 import { useHistory } from "react-router-dom"
 import {toast} from 'react-toastify'
 import { useEffect, useState } from "react"

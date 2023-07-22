@@ -9,10 +9,13 @@ import GFV from "../components/GFV"
 import {Link} from "react-router-dom"
 
 const Home = () => {
+    let reverseRecipes = []
     const {data:data, isLoading, error} = useGetRecipesQuery()
     let recipes = data?.recipes
-    let temp = recipes.slice()
-    let reverseRecipes = temp.reverse()
+    if (recipes){
+        let temp = recipes.slice()
+        reverseRecipes = temp.reverse()
+    }
     
     if (recipes){
         sessionStorage.setItem("recipes", JSON.stringify(recipes))

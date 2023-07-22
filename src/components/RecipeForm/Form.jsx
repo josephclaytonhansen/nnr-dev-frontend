@@ -387,6 +387,7 @@ const Internal = ({recipe}) => {
                                             <option value='indian'>Indian</option>
                                             <option value='italian'>Italian</option>
                                             <option value='japanese'>Japanese</option>
+                                            <option value='jamaican'>Jamaican</option>
                                             <option value='korean'>Korean</option>
                                             <option value='mexican'>Mexican</option>
                                             <option value='moroccan'>Moroccan</option>

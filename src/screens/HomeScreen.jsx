@@ -30,6 +30,7 @@ const Home = () => {
     const indian = recipes?.filter((recipe) => recipe.cuisine.toLowerCase() === 'indian').length > 0
     const italian = recipes?.filter((recipe) => recipe.cuisine.toLowerCase() === 'italian').length > 0
     const japanese = recipes?.filter((recipe) => recipe.cuisine.toLowerCase() === 'japanese').length > 0
+    const jamaican = recipes?.filter((recipe) => recipe.cuisine.toLowerCase() === 'jamaican').length > 0
     const korean = recipes?.filter((recipe) => recipe.cuisine.toLowerCase() === 'korean').length > 0
     const mexican = recipes?.filter((recipe) => recipe.cuisine.toLowerCase() === 'mexican').length > 0
     const moroccan = recipes?.filter((recipe) => recipe.cuisine.toLowerCase() === 'moroccan').length > 0
@@ -99,6 +100,10 @@ const Home = () => {
 
     const toJapanese = () => {
         window.location.href = '/cuisines/japanese'
+    }
+
+    const toJamaican = () => {
+        window.location.href = '/cuisines/jamaican'
     }
 
     const toKorean = () => {
@@ -213,6 +218,7 @@ const Home = () => {
                                             {indian  && (<Col className = 'flex-grow-0'><Button onClick = {() => toIndian()} className = 'bg-d-blue button-bg-d-blue'><h6 className = 'py-0 my-0'>Indian</h6></Button></Col>)}
                                             {italian  && (<Col className = 'flex-grow-0'><Button onClick = {() => toItalian()} className = 'bg-d-blue button-bg-d-blue'><h6 className = 'py-0 my-0'>Italian</h6></Button></Col>)}
                                             {japanese  && (<Col className = 'flex-grow-0'><Button onClick = {() => toJapanese()} className = 'bg-d-blue button-bg-d-blue'><h6 className = 'py-0 my-0'>Japanese</h6></Button></Col>)}
+                                            {jamaican  && (<Col className = 'flex-grow-0'><Button onClick = {() => toJamaican()} className = 'bg-d-blue button-bg-d-blue'><h6 className = 'py-0 my-0'>Jamaican</h6></Button></Col>)}
                                             {korean  && (<Col className = 'flex-grow-0'><Button onClick = {() => toKorean()} className = 'bg-d-blue button-bg-d-blue'><h6 className = 'py-0 my-0'>Korean</h6></Button></Col>)}
                                             {mexican  && (<Col className = 'flex-grow-0'><Button onClick = {() => toMexican()} className = 'bg-d-blue button-bg-d-blue'><h6 className = 'py-0 my-0'>Mexican</h6></Button></Col>)}
                                             {moroccan  && (<Col className = 'flex-grow-0'><Button onClick = {() => toMoroccan()} className = 'bg-d-blue button-bg-d-blue'><h6 className = 'py-0 my-0'>Moroccan</h6></Button></Col>)}

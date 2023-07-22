@@ -66,6 +66,7 @@ const Header = () => {
                         <NavDropdown.Item href="/cuisines/indian">Indian</NavDropdown.Item>
                         <NavDropdown.Item href="/cuisines/italian">Italian</NavDropdown.Item>
                         <NavDropdown.Item href="/cuisines/japanese">Japanese</NavDropdown.Item>
+                        <NavDropdown.Item href="/cuisines/jamaican">Jamaican</NavDropdown.Item>
                         <NavDropdown.Item href="/cuisines/korean">Korean</NavDropdown.Item>
                         <NavDropdown.Item href="/cuisines/mexican">Mexican</NavDropdown.Item>
                         <NavDropdown.Item href="/cuisines/moroccan">Moroccan</NavDropdown.Item>

@@ -10,8 +10,8 @@ import {Link} from "react-router-dom"
 
 const Home = () => {
     const {data:data, isLoading, error} = useGetRecipesQuery()
-    const recipes = data?.recipes
-    let temp = {...recipes}
+    let recipes = data?.recipes
+    let temp = recipes
     let reverseRecipes = temp?.reverse()
     
     if (recipes){

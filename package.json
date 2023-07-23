@@ -3,12 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "options": {
-    "proxy": "https://146.190.62.177:8443/",
+    "proxy": "https://api.nonsensefreerecipes.com",
     "allowedHosts": [
       "146.190.62.177",
       "nonsensefreerecipes.com",
       "www.nonsensefreerecipes.com",
-      "https://146.190.62.177:8443/"
+      "https://146.190.62.177:8443",
+      "https://api.nonsensefreerecipes.com",
+      "https://www.api.nonsensefreerecipes.com",
+      "https://www.api.nonsensefreerecipes.com:8443",
+      "https://api.nonsensefreerecipes.com:8443"
     ]
 
   },
